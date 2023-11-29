@@ -1,0 +1,13 @@
+= Assignment operator
+== Equals to(Check only for the value)
+=== Exactly equals to(Checks for the value and data type ) 
+! Opposite,not,negative
+!= not equals to
+!== not exactly equals to
++ addition or concatenation
+- subtraction
+/ Division
+* Multiplication
+% modulus(divides the numbers then return the remainder)
+** raise to power
+Prompt is used to collect values from users

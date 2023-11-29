@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <button onclick="addNumber()">Add</button> -->
+    <div class="p-2">
+        <input type="number" placeholder="first number" id="firstNumber">
+        <input type="number" placeholder="second number" id="secondNumber">
+
+    </div>
+
+    <div class="p-2">
+        <button onclick="sum()">+</button>
+        <button onclick="subtraction()">-</button>
+        <button onclick="Multiplication()">*</button>
+        <button onclick="Division()">/</button>
+        <div id="displayResult">let my answer display here</div>
+    </div>
+
+    <script>
+        function sum() {
+            var firstNumber =  Number(prompt("Enter the first number"))
+            var secondNumber = Number(prompt("Enter the second number"))
+            var result = firstNumber + secondNumber
+            console.log(result)
+            document.getElementById("displayResult").innerHTML = "The area of the triangle is " + result
+        }
+
+        function subtraction() {
+            var firstNumber =  Number(prompt("Enter the first number"))
+            var secondNumber = Number(prompt("Enter the second number"))
+            var result = firstNumber - secondNumber
+            console.log(result)
+            document.getElementById("displayResult").innerHTML = "The area of the triangle is " + result
+        } 
+        
+        function Multiplication() {
+            var firstNumber =  Number(prompt("Enter the first number"))
+            var secondNumber = Number(prompt("Enter the second number"))
+            var result = firstNumber * secondNumber
+            console.log(result)
+            document.getElementById("displayResult").innerHTML = "The area of the triangle is " + result
+        } 
+        
+        function Division() {
+            var firstNumber =  Number(prompt("Enter the first number"))
+            var secondNumber = Number(prompt("Enter the second number"))
+            var result = firstNumber / secondNumber
+            console.log(result)
+            document.getElementById("displayResult").innerHTML = "The area of the triangle is " + result
+        }
+
+    </script>
+
+    <div class=" p-2">
+        <h4>Areas of Shapes</h4>
+        <div>
+            <button onclick="areaOfCircle()">areaOfCircle</button>
+            <button onclick="areaOfTriangle()">areaOfTriangle</button>
+            <button onclick="areaOfSquare()">areaOfSquare</button>
+            <button onclick="areaOfTrapezium()">areaOfTrapezium</button>
+            <button onclick="areaOfRhombus()">areaOfRhombus</button>
+            <button onclick="areaOfPallelogram()">areaOfPallelogram</button>
+            <button onclick="bodyMassIndex()">bodyMassIndex</button>
+            <div id="displayAreas">Display answers here</div>
+        </div>
+    </div>
+    
+   
+    
+    
+    
+    
+    <script>
+      
+
+       function areaOfCircle() {
+        var pi = 22/7
+        var radius = Number(prompt("put in the radius"))
+        var answer = pi * (radius**2)
+        var ConvertedAnswer = answer.toFixed(2)
+        console.log(ConvertedAnswer + "cm²");
+        document.getElementById("displayAreas").innerHTML = "The area of the Circle is " + ConvertedAnswer
+       }
+
+        function areaOfTriangle() {
+            var base = Number(prompt("Input your base"))
+            var height = Number(prompt("Input your height"))
+            var area =  (base * height)/2
+            console.log("The area of the triangle is" + area);
+            document.getElementById("displayAreas").innerHTML = "The area of the triangle is " + area
+        
+        }
+
+        function areaOfSquare() {
+            var side = Number(prompt("Input your base"))
+            var area = side **2
+            console.log(area + "cm²");
+            document.getElementById("displayAreas").innerHTML = "The area of the Square is " + area
+        }
+
+       
+        function areaOfTrapezium() {
+            var half =1/2
+            var a = Number(prompt("Input your a"))
+            var b = Number(prompt("Input your b"))
+            var height = Number(prompt("Input your height"))
+            var area = half(base + height)
+            console.log(area + "cm²").innerHTML = "The area of the trapezium is " + area
+            document.getElementById("displayAreas").innerHTML = "The area of the Rhombus is " + area
+        }
+        function areaOfRhombus() {
+            var half =1/2
+            var base = Number(prompt("Input your base"))
+            var height = Number(prompt("Input your height"))
+            var area = half * base * height
+            console.log(area + "cm²");
+            document.getElementById("displayAreas").innerHTML = "The area of the Rhombus is " + area
+        }
+        function areaOfPallelogram() {
+            var base = Number(prompt("Input your base"))
+            var height = Number(prompt("Input your height"))
+            var area = base * height
+            console.log(area + "cm²");
+            document.getElementById("displayAreas").innerHTML = "The area of the parallelogram is " + area
+        }
+        
+        function bodyMassIndex() {
+            var weight = Number(prompt("Input your weight"))
+            var height = Number(prompt("Input your height"))
+            var BMI =  weight / height**2
+            console.log(BMI + "kg/m²");
+            document.getElementById("displayAreas").innerHTML = "BossMassIndex is" + BMI
+        }
+       
+    </script>
+</body>
+</html>
